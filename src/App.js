@@ -12,11 +12,14 @@ function App() {
 
   const updateCalc = value => {
     if (
+      // eslint-disable-next-line
       ops.includes(value) && calc === '' ||
+     // eslint-disable-next-line
       ops.includes(value) && ops.includes(calc.slice(-1))
     ) { return; }
     setCalc(calc + value)
     if (!ops.includes(value)) {
+      // eslint-disable-next-line
       setRsult(eval(calc + value).toString())
     }
   }
@@ -33,9 +36,11 @@ function App() {
   }
 
   const calculate = () => {
+    // eslint-disable-next-line
     setCalc(eval(calc).toString());
   }
   const deleteLast = () => {
+    // eslint-disable-next-line
     if (calc == '') {
       return;
     }
